@@ -1,0 +1,123 @@
+{% extends "TechApp/base.html" %}
+{% load static %}
+{% block content %}
+<div class="cotenedorG">
+    <div class="main">
+        <div class="shop_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d476.88917626141523!2d-72.01908027974807!3d-17.018106321709368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x914159c11f2351b7%3A0x97667ed28dcb2d17!2sSenati%20Mollendo%2C%20Mollendo%2004416!5e0!3m2!1ses-419!2spe!4v1666564390103!5m2!1ses-419!2spe"
+                                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                            <br>
+                            <small>
+                                <a href="https://maps.google.co.in/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Lighthouse+Point,+FL,+United+States&amp;aq=4&amp;oq=light&amp;sll=26.275636,-80.087265&amp;sspn=0.04941,0.104628&amp;ie=UTF8&amp;hq=&amp;hnear=Lighthouse+Point,+Broward,+Florida,+United+States&amp;t=m&amp;z=14&amp;ll=26.275636,-80.087265"
+                                    style="color:#666;text-align:left;font-size:12px">
+                                </a>
+                            </small>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-5">
+                    <p class="m_8">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                        euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+                        quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+                        consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+                        consequat</p>
+                    <div class="address">
+                        <p>500 Lorem Ipsum Dolor Sit,</p>
+                        <p>22-56-2-9 Sit Amet, Lorem,</p>
+                        <p>USA</p>
+                        <p>Phone:(00) 222 666 444</p>
+                        <p>Fax: (000) 000 00 00 0</p>
+                        <p>Email: <span>support[at]snow.com</span></p>
+                        <p>Follow on: <span>Facebook</span>, <span>Twitter</span></p>
+                    </div>
+                </div> -->
+                    <div class="col-md-5" style="font-size: 22px; color: rgb(255, 255, 255);">
+                        <h3 style="font-size: 40px;">Información</h3>
+                        <div class="address">
+                            <p>Dirección: calle nose como se llama</p>
+                            <p>sin numero, N° 15</p>
+                            <p>Celular: +51 941 153 250</p>
+                            <p>Email: <span>test@gmail.com</span></p>
+                            <p>Sigueme en:<span>Tik Tok</span>, <span>Twitter</span></p>
+                        </div>
+                    </div>
+                    <!-- <center>
+                        <div class="col-md-5">
+                            <img src="{% static 'TechApp/images/anime1.png' %}" style="width:50%;">
+                        </div>
+                    </center>                -->
+                    <!-- <div class="col-md-5">
+                                <p class="m_8">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+                                    quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+                                    consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+                                    consequat</p>
+                                <div class="address">
+                                    <p>500 Lorem Ipsum Dolor Sit,</p>
+                                    <p>22-56-2-9 Sit Amet, Lorem,</p>
+                                    <p>USA</p>
+                                    <p>Phone:(00) 222 666 444</p>
+                                    <p>Fax: (000) 000 00 00 0</p>
+                                    <p>Email: <span>support[at]snow.com</span></p>
+                                    <p>Follow on: <span>Facebook</span>, <span>Twitter</span></p>
+                                </div>
+                            </div> -->
+                </div>
+                <!-- test de texto izquerda -->
+                <div class="content-bottom">
+                    <div class="row content_bottom-text" style="margin-bottom:5px;">
+                        <div class="col-md-7">
+                            <h3 style="font-size: 40px;">Información</h3>
+                            <p class="m_1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+                                nibh
+                                euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
+                                veniam.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- final -->
+
+                <div class="row">
+                    <div class="col-md-12 contact">
+                        <form name="formulario-contacto">
+                            <div class="to">
+                                <input type="text" class="text" id="nombre" name="nombre" value="Nombre">
+                                <input type="text" class="text" id="email" value="Email" name="email">
+                            </div>
+                            <div class="text">
+                                <textarea value="Mensaje" name="mensaje" id="mensaje">Mensaje:</textarea>
+                                <div class="form-submit">
+                                    <input name="submit" type="submit" id="enviarC" value="Enviar"><br>
+                                </div>
+
+                            </div>
+                            <div class="clear">
+                            </div>
+                        </form>
+                        <script>
+                            const btnEnvio = document.getElementById('enviarC')
+                            btnEnvio.addEventListener('click', function (e) {
+                                e.preventDefault();
+                                // const formulario = document.getElementById('formulario-contacto')
+                                // const datos = new FormData(formulario);
+                                const email = document.getElementById('email').value;
+                                const nombre = document.getElementById('nombre').value;
+                                const mensaje = document.getElementById('mensaje').value;
+                                window.location.href = 'mailto:andysevas2@gmail.com?        subject=Nombre%3A%2${nombre}%0ACorreo%3A%2${correo}%0AMensaje%3A%2${mensaje}';
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "TechApp/base.html" %}
+{% load static %}
+{% block content %}
+<div class="cotenedorG">
+    <center>
+        <section>
+            <div style="background-color: rgb(255, 255, 255);">
+                Categorias:
+                {% for publicacion in publicaciones %}
+                {% for categoria in publicacion.categorias.all %}
+                <a style="color: black;" href="{% url 'categoria' categoria.id %}">{{categoria.nombre}}</a>
+                {% endfor %}
+                {% endfor %}
+            </div>
+        </section>
+
+    </center>
+
+
+
+    <div class="row">
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    {% for publicacion in publicaciones %}
+
+                    <div class="col-md-2 top_box"
+                        style=" border-width: 2px; border-style: solid; border-color: rgb(250, 250, 250); height: 330px; margin: 15px;">
+                        <center>
+                            <div class="view view-ninth">
+                                <img src="{{ publicacion.imagen.url }}" class="img-responsive" />
+                            </div>
+                            <div id="small-dialog3" class="mfp-hide">
+
+                                <div class="pop_up2">
+                                    {{publicacion.contenido}}
+                                </div>
+
+                            </div>
+
+                            <h4 class="m_5">Autor:{{publicacion.autor}}</h4>
+
+                            <div>
+                                <h4 class="m_4"><a href="#">{{publicacion.titulo}}</a></h4>
+                            </div>
+
+                        </center>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endblock %}

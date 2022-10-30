@@ -1,0 +1,48 @@
+{% extends "TechApp/base.html" %}
+{% load static %}
+{% block content %}
+<div class="cotenedorG">
+    <div class="container">
+        <div class="row" style="margin: 20px 0px 0px 0px; ">
+            <div>
+                <h1 style="text-align: center;">
+                    BLOG
+                </h1>
+            </div>
+            {% for publicacion in publicaciones %}
+            <div class="col-sm-4">
+                <div class="card hoverlocal" style="margin-bottom: 50px;">
+                    <h5 class="card-title" style="text-align: center; margin: 35px; color:white ;">{{
+                        publicacion.titulo }}</h5>
+                    <center>
+                        <div style="height: auto; width:auto;">
+                            <img style="object-fit: cover; margin-top: 35px;" src="{{ publicacion.imagen.url }} "
+                                class="card-img-top imageBlog">
+                        </div>
+                    </center>
+                    <div class="card-body" style="text-align: center; color: white; margin-top: 20px;">
+                        <p class="card-text" style="margin-bottom: 35px;">
+                            {{ publicacion.descripcion }}
+                        </p>
+                        <div style="margin-top: -15px;">
+                            <ul class="social" style="align-items: center;">
+                                <li>
+                                    <button class="buttonShop">
+                                        Ver
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+</div>
+
+
+
+{% endblock %}

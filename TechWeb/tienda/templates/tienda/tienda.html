@@ -1,0 +1,65 @@
+{% extends "TechApp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+<div class="cotenedorG">
+  <!-- acordase de terminar el boton flotante -->
+  <!-- boton flotante -->
+  <!-- <a id="btn-abrir-modalS" href="#" class="btn-s" target="_blank"> -->
+  <button id="btn-abrir-modalS" href="#" class="btn-s" target="_blank">
+  </button>
+  <i class="fa-brands fa-shopify"></i>
+  </a>
+  <!-- <dialog id="modalS">
+      <div style="float:right;">
+        {% include "carro/widget.html" %}
+        <button id="btn-cerrar-modalS">
+          Cerrar
+        </button> 
+      </div>
+
+    </dialog> -->
+
+  <!-- final  -->
+  <div class="container">
+    <div class="row">
+      {% for producto in productos %}
+      <div class="col-sm-4">
+        <div class="card hoverlocal1" style="margin-bottom: 50px;">
+          <h5 class="card-title" style="text-align: center; margin: 35px; color:white;  font-weight: bold;">
+            {{ producto.nombre }}
+          </h5>
+          <center>
+            <div style="height: auto; width:auto;">
+              <img style="object-fit: cover; margin: 35px;" src="{{ producto.imagen.url }} "
+                class="card-img-top imageBlog">
+            </div>
+          </center>
+          <div class="card-body" style="text-align: center; color: white; margin-top: 20px;">
+            <p class="card-text" style="margin-bottom: 35px;">
+              S/. {{ producto.precio }}
+            </p>
+            <div style="margin-top: -15px;">
+
+              <!-- boton de carrito -->
+              <ul class="social" style="align-items: center;">
+                <li class="cart"><a href="{% url 'carro:agregar' producto.id %}">
+                    Agregar
+                  </a>
+                </li>
+                <li class="shop_btn"><a href="#">
+                    Ver
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
